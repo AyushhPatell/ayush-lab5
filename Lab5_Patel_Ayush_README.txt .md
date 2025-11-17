@@ -4,8 +4,8 @@ Name: Ayush
 Student ID: B00951805
 Date: 16th November, 2025
 
-- Netlify URL: 
-- GitHub URL: https://github.com/AyushhPatell/lab5/tree/main/my-portfolio
+- Netlify URL: https://ayush-lab5.netlify.app/
+- GitHub URL: https://github.com/AyushhPatell/ayush-lab5
 - GitLab URL: https://git.cs.dal.ca/aspatel/lab5/-/tree/main/my-portfolio?ref_type=heads
 
 ## Project Description:

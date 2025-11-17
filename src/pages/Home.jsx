@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Home() {
     return (
         <div className="container py-5">
@@ -6,7 +8,7 @@ function Home() {
                     <h1 className="display-4 mb-4">Welcome to My Portfolio</h1>
 
                     <div className="lead mb-5">
-                        <p>Hello! I'm a Computer Science student at Dalhousie University</p>
+                        <p>Hello! I'm Ayush Patel a Computer Science student at Dalhousie University</p>
                         <p>Passionate about web development and creating innovative solutions</p>
                     </div>
 
@@ -22,15 +24,6 @@ function Home() {
                             This portfolio showcases my journey as a developer and the projects
                             I've worked on during my academic career and personal time.
                         </p>
-                    </div>
-
-                    <div className="mt-5">
-                        <a href="/about" className="btn btn-primary btn-lg me-3">
-                            Learn More About Me
-                        </a>
-                        <a href="/projects" className="btn btn-outline-primary btn-lg">
-                            View My Projects
-                        </a>
                     </div>
                 </div>
             </div>
