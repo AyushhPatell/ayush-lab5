@@ -2,7 +2,7 @@
 
 Name: Ayush Patel
 Student ID: B00951805
-Date: 22 January, 2025
+Date: 22 November, 2025
 
 ## Deployment Information
 - Netlify URL: https://my-portfolio-lab6.netlify.app/
