@@ -111,7 +111,7 @@ Fill in:
 2. Click "New variable"
 3. Add:
    - **Key:** `VITE_API_URL`
-   - **Value:** `https://your-backend-url.onrender.com` (the URL from Render)
+   - **Value:** `https://my-portfolio-backend-rqc3.onrender.com`
 4. Click "Deploy site"
 
 ### Step 5: Wait for Deployment

@@ -5,7 +5,7 @@ Student ID: B00951805
 Date: January 2025
 
 ## Deployment Information
-- Netlify URL:
+- Netlify URL: https://my-portfolio-lab6.netlify.app/
 - GitHub URL: https://github.com/AyushhPatell/ayush-lab5-6
 - GitLab URL: https://git.cs.dal.ca/aspatel/lab5/-/tree/main/my-portfolio?ref_type=heads
 
