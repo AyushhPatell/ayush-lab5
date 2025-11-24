@@ -1,4 +1,61 @@
-function About() {
+import { useState } from 'react';
+
+function About()
+{
+    const [searchQuery, setSearchQuery] = useState('');
+    const [selectedCategories, setSelectedCategories] = useState([]);
+
+    const skills = [
+        { name: 'JavaScript', category: 'Frontend' },
+        { name: 'React', category: 'Frontend' },
+        { name: 'HTML/CSS', category: 'Frontend' },
+        { name: 'Bootstrap', category: 'Frontend' },
+        { name: 'Python', category: 'Backend' },
+        { name: 'Java', category: 'Backend' },
+        { name: 'Node.js', category: 'Backend' },
+        { name: 'SQL', category: 'Database' },
+        { name: 'Git', category: 'Tools' },
+        { name: 'Power BI', category: 'Tools' },
+        { name: 'PHP', category: 'Backend' },
+        { name: 'Docker', category: 'Tools' },
+        { name: 'SharePoint', category: 'Tools' },
+        { name: 'Power Automate', category: 'Tools' },
+        { name: 'Microsoft Access', category: 'Database' },
+        { name: 'Excel', category: 'Tools' }
+    ];
+
+    const categories = ['Frontend', 'Backend', 'Database', 'Tools'];
+
+    function toggleCategory(category)
+    {
+        if (selectedCategories.includes(category))
+        {
+            setSelectedCategories(selectedCategories.filter(c => c !== category));
+        }
+        else
+        {
+            setSelectedCategories([...selectedCategories, category]);
+        }
+    }
+
+    let filteredSkills = skills;
+    
+    if (searchQuery)
+    {
+        filteredSkills = filteredSkills.filter(skill => {
+            const nameMatch = skill.name.toLowerCase().includes(searchQuery.toLowerCase());
+            const categoryMatch = skill.category.toLowerCase().includes(searchQuery.toLowerCase());
+            return nameMatch || categoryMatch;
+        });
+    }
+    
+    if (selectedCategories.length > 0)
+    {
+        filteredSkills = filteredSkills.filter(skill => 
+            selectedCategories.includes(skill.category)
+        );
+    }
+
     return (
         <div className="container py-5">
             <h1 className="text-center mb-5">About Me</h1>
@@ -35,27 +92,67 @@ function About() {
                 </div>
             </div>
             <div className="row mt-4">
-                <div className="col-md-6 mb-4">
+                <div className="col-md-12 mb-4">
                     <div className="card h-100">
                         <div className="card-body">
                             <h2 className="card-title h4 mb-4">Technical Skills</h2>
-                            <div className="skills-section">
-                                <h3 className="h6 mb-2">Programming Languages</h3>
-                                <div className="mb-3">
-                                    <span className="badge bg-primary me-2 mb-2">JavaScript</span>
-                                    <span className="badge bg-primary me-2 mb-2">Python</span>
-                                    <span className="badge bg-primary me-2 mb-2">Java</span>
-                                    <span className="badge bg-primary me-2 mb-2">HTML/CSS</span>
-                                    <span className="badge bg-primary me-2 mb-2">SQL</span>
-                                </div>
+                            
+                            <div className="mb-4">
+                                <label htmlFor="skillSearch" className="form-label">Search Skills:</label>
+                                <input
+                                    type="text"
+                                    id="skillSearch"
+                                    className="form-control"
+                                    placeholder="Search by name or category..."
+                                    value={searchQuery}
+                                    onChange={(e) => setSearchQuery(e.target.value)}
+                                />
+                            </div>
 
-                                <h3 className="h6 mb-2">Tools & Frameworks</h3>
-                                <div>
-                                    <span className="badge bg-secondary me-2 mb-2">React</span>
-                                    <span className="badge bg-secondary me-2 mb-2">Node.js</span>
-                                    <span className="badge bg-secondary me-2 mb-2">Bootstrap</span>
-                                    <span className="badge bg-secondary me-2 mb-2">Git</span>
-                                    <span className="badge bg-secondary me-2 mb-2">Power BI</span>
+                            <div className="mb-4">
+                                <label className="form-label">Filter by Category:</label>
+                                <div className="d-flex flex-wrap gap-2">
+                                    {categories.map(category => (
+                                        <div key={category} className="form-check form-check-inline">
+                                            <input
+                                                className="form-check-input"
+                                                type="checkbox"
+                                                id={`category-${category}`}
+                                                checked={selectedCategories.includes(category)}
+                                                onChange={() => toggleCategory(category)}
+                                            />
+                                            <label className="form-check-label" htmlFor={`category-${category}`}>
+                                                {category}
+                                            </label>
+                                        </div>
+                                    ))}
+                                    {selectedCategories.length > 0 && (
+                                        <button
+                                            className="btn btn-sm btn-outline-secondary"
+                                            onClick={() => setSelectedCategories([])}
+                                        >
+                                            Clear
+                                        </button>
+                                    )}
+                                </div>
+                            </div>
+
+                            <div className="skills-section">
+                                <h3 className="h6 mb-3">
+                                    {filteredSkills.length} skill{filteredSkills.length !== 1 ? 's' : ''} found
+                                </h3>
+                                <div className="mb-3">
+                                    {filteredSkills.map((skill, index) => (
+                                        <span
+                                            key={index}
+                                            className="badge bg-primary me-2 mb-2"
+                                        >
+                                            {skill.name}
+                                        </span>
+                                    ))}
+                                    {filteredSkills.length === 0 && (
+                                        <p className="text-muted">No skills match your search.</p>
+                                    )}
                                 </div>
                             </div>
                         </div>

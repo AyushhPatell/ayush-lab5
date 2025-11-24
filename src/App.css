@@ -3,7 +3,19 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+.app-container.light-theme {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.app-container.dark-theme {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
 .main-content
 {
     flex: 1;
@@ -14,17 +26,35 @@
 {
     border-left: 4px solid #007bff;
 }
+
+.dark-theme .home-intro {
+    background-color: #2d2d2d !important;
+    color: #e0e0e0;
+}
+
 .card
 {
     border: none;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
+
+.dark-theme .card {
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
 .card:hover
 {
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
+
+.dark-theme .card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
 .badge
 {
     font-weight: normal;
@@ -51,6 +81,11 @@
     background-color: #212529 !important;
     margin-top: auto;
 }
+
+.dark-theme .footer {
+    background-color: #0d0d0d !important;
+}
+
 .social-links a
 {
     text-decoration: none;
@@ -88,6 +123,45 @@ textarea:focus
 {
     top: 0;
 }
+
+.dark-theme .bg-light {
+    background-color: #2d2d2d !important;
+}
+
+.dark-theme .text-muted {
+    color: #a0a0a0 !important;
+}
+
+.dark-theme .alert {
+    background-color: #2d2d2d;
+    border-color: #444;
+    color: #e0e0e0;
+}
+
+.dark-theme .alert-warning {
+    background-color: #3d2d00;
+    border-color: #664d00;
+    color: #ffc107;
+}
+
+.dark-theme .alert-danger {
+    background-color: #3d1a1a;
+    border-color: #664444;
+    color: #f8d7da;
+}
+
+.dark-theme .alert-info {
+    background-color: #1a2d3d;
+    border-color: #2d4d6d;
+    color: #d1ecf1;
+}
+
+/* Weather card specific dark theme styles */
+.dark-theme .card .bg-light {
+    background-color: #1a1a1a !important;
+    border: 1px solid #444;
+}
+
 @media (max-width: 768px)
 {
     .display-4

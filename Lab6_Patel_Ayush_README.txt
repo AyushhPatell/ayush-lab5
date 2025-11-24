@@ -1,0 +1,42 @@
+# CSCI 3172 - Web Development - Lab 6
+
+Name: Ayush Patel
+Student ID: B00951805
+Date: January 2025
+
+## Deployment Information
+- Netlify URL:
+- GitHub URL: https://github.com/AyushhPatell/ayush-lab5-6
+- GitLab URL: https://git.cs.dal.ca/aspatel/lab5/-/tree/main/my-portfolio?ref_type=heads
+
+## Project Description
+This is my personal portfolio website built with React. I added interactive features like theme switching, skill filtering, and API integration for this lab. The website shows my education, skills, and projects.
+
+## Technologies Used
+- JavaScript, React, React Router, Bootstrap, Express.js, Node.js.
+
+I did manual testing for all features:
+
+1. Theme Switcher.
+2. Skill List.
+3. Projects Page.
+4. Weather.
+5. Responsive Design.
+6. 404 Page.
+
+## Installation Instructions
+
+
+## API Endpoints
+
+Backend runs on http://localhost:3001/api
+1. GET /api/projects - Returns all projects
+2. GET /api/weather?city=Halifax - Returns weather data
+
+## Sources
+- Bootstrap. (2025). Bootstrap. Getbootstrap.com. https://getbootstrap.com/
+- Initiative, W. W. A. (n.d.). WCAG 2 Overview. Web Accessibility Initiative (WAI). https://www.w3.org/WAI/standards-guidelines/wcag/
+- Getting started. (n.d.). Vitejs. https://vite.dev/guide/
+- React Documentation: https://react.dev/ - Used for learning useState and useEffect
+- React. (n.d.). https://react.dev/
+- OpenWeatherMap.org. (n.d.). Weather API - OpenWeatherMap. https://openweathermap.org/api

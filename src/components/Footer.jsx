@@ -1,4 +1,5 @@
-function Footer() {
+function Footer()
+{
     return (
         <footer className="footer bg-dark text-white py-4 mt-auto">
             <div className="container text-center">

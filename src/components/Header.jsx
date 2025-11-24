@@ -1,11 +1,12 @@
 import { Link, useLocation } from 'react-router-dom';
 
-function Header() {
+function Header({ theme, toggleTheme })
+{
     const location = useLocation();
 
     return (
         <header>
-            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+            <nav className={`navbar navbar-expand-lg ${theme === 'dark' ? 'navbar-dark bg-dark' : 'navbar-light bg-light'}`}>
                 <div className="container">
                     <Link className="navbar-brand" to="/">My Portfolio</Link>
 
@@ -14,6 +15,9 @@ function Header() {
                         type="button"
                         data-bs-toggle="collapse"
                         data-bs-target="#navbarNav"
+                        aria-controls="navbarNav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
                     >
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -43,6 +47,15 @@ function Header() {
                                 >
                                     Projects
                                 </Link>
+                            </li>
+                            <li className="nav-item">
+                                <button
+                                    className="btn btn-outline-secondary ms-2"
+                                    onClick={toggleTheme}
+                                    aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+                                >
+                                    {theme === 'light' ? '🌙' : '☀️'}
+                                </button>
                             </li>
                         </ul>
                     </div>

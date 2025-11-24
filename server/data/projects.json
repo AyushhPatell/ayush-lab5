@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "projectName": "Business Intelligence Dashboard System",
+        "author": "Ayush Patel",
+        "languages": ["Power BI", "SharePoint", "Microsoft Access", "Power Automate", "SQL", "Excel"],
+        "description": "Developed comprehensive Power BI dashboards and SharePoint systems for MacGregor Industrial Group during co-op placement. Created integrated dashboards with real-time data updates, automated reporting workflows, and executive level KPI tracking. Implemented SharePoint integration for document management."
+    },
+    {
+        "id": 2,
+        "projectName": "Student Observation Tool",
+        "author": "Ayush Patel",
+        "languages": ["JavaScript", "HTML5", "CSS3", "SQL", "PHP", "Docker"],
+        "description": "Web-based application for educators to track and analyze student progress with comprehensive data management features. Built responsive web application with intuitive UI, automated backup systems, data export functionality, and secure user authentication. Implemented comprehensive testing procedures."
+    },
+    {
+        "id": 3,
+        "projectName": "Personal Portfolio Website",
+        "author": "Ayush Patel",
+        "languages": ["React", "JavaScript", "HTML5", "CSS3", "Bootstrap"],
+        "description": "A modern, responsive portfolio website built with React and Bootstrap. Features include theme switching, interactive skill filtering, API integration for projects and weather data, and a fully responsive design."
+    }
+]
+

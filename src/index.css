@@ -7,6 +7,12 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f2f2f2;
     color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+[data-theme="dark"] body {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
 }
 
 code {

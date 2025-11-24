@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 
-function NotFound() {
+function NotFound()
+{
     return (
         <div className="container py-5">
             <div className="row justify-content-center">

@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
@@ -9,11 +10,34 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import NotFound from './pages/NotFound';
 
-function App() {
+function App()
+{
+    const [theme, setTheme] = useState(() => {
+        const saved = localStorage.getItem('theme');
+        return saved || 'light';
+    });
+
+    useEffect(() => {
+        localStorage.setItem('theme', theme);
+        document.documentElement.setAttribute('data-theme', theme);
+    }, [theme]);
+
+    function toggleTheme()
+    {
+        if (theme === 'light')
+        {
+            setTheme('dark');
+        }
+        else
+        {
+            setTheme('light');
+        }
+    }
+
     return (
         <Router>
-            <div className="app-container">
-                <Header />
+            <div className={`app-container ${theme === 'dark' ? 'dark-theme' : 'light-theme'}`}>
+                <Header theme={theme} toggleTheme={toggleTheme} />
 
                 <main className="main-content">
                     <Routes>
