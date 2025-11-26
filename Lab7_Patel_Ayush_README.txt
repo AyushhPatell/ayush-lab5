@@ -17,15 +17,13 @@ This is my personal portfolio website built with React. For Lab 7, I added a con
 
 ## Features Implemented
 
-### Front-End Requirements
-
+### Front-End:
 1. Contact Form.
 2. Form Validation and Sanitization.
 3. Used localStorage.
 4. Messages Page.
 
-### Back-End Requirements
-
+### Back-End:
 1. Contact Form Backend.
 2. Messages Page Backend.
 
